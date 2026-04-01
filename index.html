@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Business Name] | Booking</title>
+    <title>Acrylics by Amxndv | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* --- CSS VARIABLES (Easy to change colors here) --- */
+        /* --- CSS VARIABLES --- */
         :root {
-            --bg-color: #0a0a0a; /* Dark background */
+            --bg-color: #0a0a0a;
             --text-color: #ffffff;
-            --neon-color: #ff3399; /* Pink glow. Change to #00f3ff for the blue look in image 2 */
+            --neon-color: #ff3399; /* Pink glow */
             --neon-light: #ffb3d9;
             --border-color: #333333;
         }
@@ -31,7 +31,6 @@
             justify-content: center;
         }
 
-        /* Container mimics a mobile-first scheduling page layout */
         .container {
             max-width: 600px;
             width: 100%;
@@ -77,7 +76,7 @@
             padding: 60px 20px;
         }
 
-        /* --- ABOUT/MEET THE TECH SECTION --- */
+        /* --- ABOUT SECTION --- */
         .about-section {
             display: flex;
             flex-direction: column;
@@ -85,20 +84,11 @@
             text-align: center;
         }
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid var(--neon-color);
-            box-shadow: 0 0 15px var(--neon-color);
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
         .about-text {
             font-size: 0.9rem;
             color: #ddd;
             max-width: 90%;
+            margin-top: 15px;
         }
 
         /* --- POLICIES SECTION --- */
@@ -135,10 +125,10 @@
             color: #bbb;
         }
 
-        /* --- HOURS & INFO SECTION --- */
+        /* --- INFO SECTION --- */
         .info-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 20px;
             text-align: center;
         }
@@ -157,7 +147,17 @@
         }
 
         .info-block li {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .info-block a {
+            color: var(--neon-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .info-block a:hover {
+            color: #fff;
         }
 
         /* --- GALLERY SECTION --- */
@@ -183,27 +183,6 @@
             font-size: 0.8rem;
             color: #777;
         }
-
-        .btn-book {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 30px;
-            background-color: transparent;
-            color: #fff;
-            text-decoration: none;
-            border: 2px solid var(--neon-color);
-            border-radius: 25px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 10px var(--neon-color) inset;
-        }
-
-        .btn-book:hover {
-            background-color: var(--neon-color);
-            box-shadow: 0 0 20px var(--neon-color);
-        }
     </style>
 </head>
 <body>
@@ -211,45 +190,42 @@
     <div class="container">
         
         <header class="hero">
-            <p class="subheading">Welcome to our booking site</p>
-            <h1 class="neon-text">[Business Name]</h1>
-            <p class="subheading" style="margin-bottom: 0;">Located in [Your City, State]</p>
+            <p class="subheading">Welcome to my portfolio</p>
+            <h1 class="neon-text">Acrylics by Amxndv</h1>
+            <p class="subheading" style="margin-bottom: 0;">Located in Minnesota</p>
         </header>
 
         <section class="about-section">
             <h2 class="neon-text" style="font-size: 2.5rem;">Hello Beauty!</h2>
-            <img src="https://via.placeholder.com/150/333/fff?text=[Profile+Pic]" alt="Profile Picture" class="profile-img">
-            <h3 style="margin-bottom: 10px; font-weight: 400;">[Your Name] - [Your Title]</h3>
             <p class="about-text">
-                [Insert a brief bio here. Welcome your clients, mention your experience, what you specialize in, and why they should book with you. Keep it sweet and professional.]
+                Welcome to my digital portfolio! I specialize in high-quality acrylic sets. Take a look around to see my past work, read my policies, and check out the services I offer.
             </p>
-            <a href="[Link to actual Acuity/Booking page]" class="btn-book">Book Appointment</a>
         </section>
 
         <section>
-            <h2 class="neon-text" style="font-size: 2.5rem;">Booking Policies</h2>
-            <p class="subheading">Please read before booking</p>
+            <h2 class="neon-text" style="font-size: 2.5rem;">Policies</h2>
+            <p class="subheading">Please read carefully</p>
             
             <div class="policies-grid">
                 <div class="policy-item">
                     <div class="policy-icon">💳</div>
-                    <h3>Payment</h3>
-                    <p>[Detail your deposit requirements. E.g., A non-refundable deposit of $X is required to secure your spot. Remaining balance due in cash.]</p>
+                    <h3>Deposit</h3>
+                    <p>A <strong>$15 deposit</strong> is required to secure your spot. This deposit is strictly <strong>non-refundable</strong>.</p>
                 </div>
                 <div class="policy-item">
                     <div class="policy-icon">⏰</div>
                     <h3>Late Policy</h3>
-                    <p>[Detail your grace period. E.g., A 10-minute grace period is given. After 15 minutes, a $X late fee applies or appointment is canceled.]</p>
+                    <p>Please inform me at least <strong>15 minutes before</strong> your appointment time if you are going to be late.</p>
                 </div>
                 <div class="policy-item">
                     <div class="policy-icon">📅</div>
                     <h3>Cancellation</h3>
-                    <p>[Detail cancellation timeframe. E.g., Please provide 24-48 hours notice for cancellations. Same-day cancellations forfeit deposit.]</p>
+                    <p>If you need to cancel your appointment, please inform me at least <strong>24 hours before</strong> your scheduled time.</p>
                 </div>
                 <div class="policy-item">
                     <div class="policy-icon">💵</div>
                     <h3>Refunds</h3>
-                    <p>[Detail refund policy. E.g., All services are final. No refunds will be issued once the service is completed.]</p>
+                    <p>All services are final. Deposits and completed services are non-refundable.</p>
                 </div>
             </div>
         </section>
@@ -257,39 +233,30 @@
         <section>
             <div class="info-grid">
                 <div class="info-block">
-                    <h3>Contact Us</h3>
+                    <h3>Get in Touch</h3>
                     <ul>
-                        <li>📞 [Phone Number]</li>
-                        <li>✉️ [Email Address]</li>
-                        <li>📸 @[Instagram Handle]</li>
-                        <li>📍 [General Location/Address]</li>
-                    </ul>
-                </div>
-                <div class="info-block">
-                    <h3>Hours</h3>
-                    <ul>
-                        <li><strong>Mon - Fri:</strong> [10 AM - 6 PM]</li>
-                        <li><strong>Saturday:</strong> [10 AM - 4 PM]</li>
-                        <li><strong>Sunday:</strong> [CLOSED]</li>
+                        <li>📸 <a href="https://www.instagram.com/acrylicsby.amxndv?igsh=eXA3ZjdyYjhyaGhx" target="_blank">@acrylicsby.amxndv</a></li>
+                        <li>📍 Minnesota</li>
+                        <li>✉️ [Your Email Address Here]</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2 class="neon-text" style="font-size: 2.5rem;">Client Results</h2>
+            <h2 class="neon-text" style="font-size: 2.5rem;">My Work</h2>
             <div class="gallery-grid">
-                <img src="https://via.placeholder.com/300/333/fff?text=[Image+1]" alt="Client Work 1">
-                <img src="https://via.placeholder.com/300/333/fff?text=[Image+2]" alt="Client Work 2">
-                <img src="https://via.placeholder.com/300/333/fff?text=[Image+3]" alt="Client Work 3">
-                <img src="https://via.placeholder.com/300/333/fff?text=[Image+4]" alt="Client Work 4">
-                <img src="https://via.placeholder.com/300/333/fff?text=[Image+5]" alt="Client Work 5">
-                <img src="https://via.placeholder.com/300/333/fff?text=[Image+6]" alt="Client Work 6">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+1]" alt="Nail Art 1">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+2]" alt="Nail Art 2">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+3]" alt="Nail Art 3">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+4]" alt="Nail Art 4">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+5]" alt="Nail Art 5">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+6]" alt="Nail Art 6">
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2026 [Your Business Name]. All rights reserved.</p>
+            <p>&copy; 2026 Amanda Thao. All rights reserved.</p>
         </footer>
 
     </div>
