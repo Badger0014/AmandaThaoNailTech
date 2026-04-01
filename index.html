@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Business Name] | Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS VARIABLES (Easy to change colors here) --- */
+        :root {
+            --bg-color: #0a0a0a; /* Dark background */
+            --text-color: #ffffff;
+            --neon-color: #ff3399; /* Pink glow. Change to #00f3ff for the blue look in image 2 */
+            --neon-light: #ffb3d9;
+            --border-color: #333333;
+        }
+
+        /* --- GLOBAL STYLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Container mimics a mobile-first scheduling page layout */
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: #111;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        section {
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .neon-text {
+            font-family: 'Dancing Script', cursive;
+            color: #fff;
+            text-shadow: 
+                0 0 5px var(--neon-light),
+                0 0 10px var(--neon-light),
+                0 0 20px var(--neon-color),
+                0 0 40px var(--neon-color);
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subheading {
+            text-align: center;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/600x300/222/555?text=[Hero+Background+Image]');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        /* --- ABOUT/MEET THE TECH SECTION --- */
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--neon-color);
+            box-shadow: 0 0 15px var(--neon-color);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            font-size: 0.9rem;
+            color: #ddd;
+            max-width: 90%;
+        }
+
+        /* --- POLICIES SECTION --- */
+        .policies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .policy-item {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid var(--neon-color);
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .policy-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--neon-light);
+        }
+
+        .policy-item h3 {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: var(--neon-light);
+        }
+
+        .policy-item p {
+            font-size: 0.75rem;
+            color: #bbb;
+        }
+
+        /* --- HOURS & INFO SECTION --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .info-block h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--neon-light);
+            margin-bottom: 15px;
+        }
+
+        .info-block p, .info-block ul {
+            font-size: 0.85rem;
+            color: #ddd;
+            list-style: none;
+        }
+
+        .info-block li {
+            margin-bottom: 5px;
+        }
+
+        /* --- GALLERY SECTION --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #333;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        .btn-book {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid var(--neon-color);
+            border-radius: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px var(--neon-color) inset;
+        }
+
+        .btn-book:hover {
+            background-color: var(--neon-color);
+            box-shadow: 0 0 20px var(--neon-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="hero">
+            <p class="subheading">Welcome to our booking site</p>
+            <h1 class="neon-text">[Business Name]</h1>
+            <p class="subheading" style="margin-bottom: 0;">Located in [Your City, State]</p>
+        </header>
+
+        <section class="about-section">
+            <h2 class="neon-text" style="font-size: 2.5rem;">Hello Beauty!</h2>
+            <img src="https://via.placeholder.com/150/333/fff?text=[Profile+Pic]" alt="Profile Picture" class="profile-img">
+            <h3 style="margin-bottom: 10px; font-weight: 400;">[Your Name] - [Your Title]</h3>
+            <p class="about-text">
+                [Insert a brief bio here. Welcome your clients, mention your experience, what you specialize in, and why they should book with you. Keep it sweet and professional.]
+            </p>
+            <a href="[Link to actual Acuity/Booking page]" class="btn-book">Book Appointment</a>
+        </section>
+
+        <section>
+            <h2 class="neon-text" style="font-size: 2.5rem;">Booking Policies</h2>
+            <p class="subheading">Please read before booking</p>
+            
+            <div class="policies-grid">
+                <div class="policy-item">
+                    <div class="policy-icon">💳</div>
+                    <h3>Payment</h3>
+                    <p>[Detail your deposit requirements. E.g., A non-refundable deposit of $X is required to secure your spot. Remaining balance due in cash.]</p>
+                </div>
+                <div class="policy-item">
+                    <div class="policy-icon">⏰</div>
+                    <h3>Late Policy</h3>
+                    <p>[Detail your grace period. E.g., A 10-minute grace period is given. After 15 minutes, a $X late fee applies or appointment is canceled.]</p>
+                </div>
+                <div class="policy-item">
+                    <div class="policy-icon">📅</div>
+                    <h3>Cancellation</h3>
+                    <p>[Detail cancellation timeframe. E.g., Please provide 24-48 hours notice for cancellations. Same-day cancellations forfeit deposit.]</p>
+                </div>
+                <div class="policy-item">
+                    <div class="policy-icon">💵</div>
+                    <h3>Refunds</h3>
+                    <p>[Detail refund policy. E.g., All services are final. No refunds will be issued once the service is completed.]</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="info-grid">
+                <div class="info-block">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>📞 [Phone Number]</li>
+                        <li>✉️ [Email Address]</li>
+                        <li>📸 @[Instagram Handle]</li>
+                        <li>📍 [General Location/Address]</li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h3>Hours</h3>
+                    <ul>
+                        <li><strong>Mon - Fri:</strong> [10 AM - 6 PM]</li>
+                        <li><strong>Saturday:</strong> [10 AM - 4 PM]</li>
+                        <li><strong>Sunday:</strong> [CLOSED]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="neon-text" style="font-size: 2.5rem;">Client Results</h2>
+            <div class="gallery-grid">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+1]" alt="Client Work 1">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+2]" alt="Client Work 2">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+3]" alt="Client Work 3">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+4]" alt="Client Work 4">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+5]" alt="Client Work 5">
+                <img src="https://via.placeholder.com/300/333/fff?text=[Image+6]" alt="Client Work 6">
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 [Your Business Name]. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
